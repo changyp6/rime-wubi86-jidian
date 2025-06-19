@@ -3,7 +3,7 @@
 
 schema:
   schema_id: wubi86_jidian_pinyin
-  name: "极点五笔拼音混输"
+  name: "极点五笔拼音"
   version: "0.9"
   icon: "wubi86_jidian.ico"           # string 方案图标，格式： .ico
   ascii_icon:                         # string
