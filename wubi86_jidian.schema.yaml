@@ -70,7 +70,7 @@ translator:
   enable_charset_filter: false           # 开启字符集过滤
   enable_completion: true               # 是否显示编码未输入完整的词条
 
-  enable_sentence: false                # 句子输入模式
+  enable_sentence: true                # 句子输入模式
   enable_user_dict: true               # 是否开启用户词典（用户词典记录动态字词频，用户词）
   enable_encoder: true
 
@@ -108,9 +108,9 @@ reverse_lookup:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
+
 punctuator:
-  import_preset: default
-#  import_preset: symbols
+  import_preset: symbols
 # 开始快捷输入符号功能，前面留两个空格
 # 对应需要将下面 recognizer -> patterns 下面的 punct 字段的注释去掉
 
@@ -120,7 +120,7 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-#    punct: "^/([0-9]+[a-z]*|[a-z]+)$" # 注意前方需要有4个空格，跟下面对齐
+    punct: "^/([0-9]+[a-z]*|[a-z]+)$" # 注意前方需要有4个空格，跟下面对齐
     reverse_lookup: "^z[a-z]*'?$" # 反查词条的正则
 
 # 重复上一次输入
